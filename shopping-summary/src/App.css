@@ -1,0 +1,250 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h3 {
+    display: flex;
+    align-items: center;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    background-color: #f3f3f3;
+    height: 110vh;
+    width: 100vw;
+
+}
+.normalcard {
+    width: 28vw;
+    height: 60vh;
+    margin: 2.4rem 2.4rem;
+    background-color: #e4dee7a8;;
+    transition: all 0.3s linear;
+}
+.fullcard {
+    width: 28vw;
+    height: 46.75rem;
+    margin: 2.4rem 2.4rem;
+    background-color: #e4dee7a8;;
+    transition: all 0.3s linear;
+}
+.cardWithOne {
+    width: 28vw;
+    height: 80vh;
+    margin: 2.4rem 2.4rem;
+    background-color: #e4dee7a8;;
+    transition: all 0.3s linear;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* Subtotal */
+.subtotal {
+    width: 80%;
+    margin: 10% 10% 0;
+    display: flex;
+    justify-content: space-between;
+}
+/* Pickup Savings */
+.pickupSavings {
+    width: 80%;
+    margin: 4% 10% 0;
+    display: flex;
+    justify-content: space-between;
+}
+.pickupSavings > .pickupSavings-value {
+    color: red;
+}
+.tooltip {
+    display:inline-block;
+    position:relative;
+    border-bottom:1px dotted #666;
+    text-align:left;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.tooltip .bottom {
+    min-width:200px; 
+    top:40px;
+    left:50%;
+    transform:translate(-50%, 0);
+    padding:10px 20px;
+    color:#444444;
+    background-color:#EEEEEE;
+    font-weight:normal;
+    font-size:18px;
+    border-radius:8px;
+    position:absolute;
+    z-index:99999999;
+    box-sizing:border-box;
+    box-shadow:0 1px 8px rgba(0,0,0,0.5);
+    display:none;
+}
+
+.tooltip:hover .bottom {
+    display:block;
+}
+
+.tooltip .bottom i {
+    position:absolute;
+    bottom:100%;
+    left:50%;
+    margin-left:-12px;
+    width:24px;
+    height:12px;
+    overflow:hidden;
+}
+
+.tooltip .bottom i::after {
+    content:'';
+    position:absolute;
+    width:12px;
+    height:12px;
+    left:50%;
+    transform:translate(-50%,50%) rotate(45deg);
+    background-color:#EEEEEE;
+    box-shadow:0 1px 8px rgba(0,0,0,0.5);
+}
+
+/* Tax */
+.tax {
+    width: 80%;
+    margin: 4% 10% 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Total Tax */
+.total {
+
+    margin-top: 5rem;
+    transition: all 0.3s ease-in-out;
+}
+.totalTax {
+    width: 60%;
+    margin: 4% 10% 0;
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.3s linear;
+}
+
+.total > a.my-button {
+    margin: 5% 10% 0;
+    background-color: transparent;
+    color: #6433E0;
+    font-family: Trebuchet MS;
+    font-size: 15px;
+    font-weight: 800;
+    font-style: italic;
+    text-decoration: none;
+    padding: 5px 8px;
+    border: 0px solid #000;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.total > a.my-button:hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    border: 0.2px solid #6433E0;
+}
+
+/* Promo Code */
+.promoContainer {
+    margin: 2.5% 10% 2%;
+    padding: 3% 4%;
+    border: 1px solid black;
+    background-color: rgba(206, 207, 204, 0.8);
+}
+
+.promoContainer > h3 {
+    font-size: 20px;
+    padding: 0.3rem;
+}
+.promoContainer > input {
+    margin: 0.3rem 0.3rem 0.9rem 0.3rem;
+    padding: 0.3rem;
+    width: 15rem;
+}
+.promoDiv {
+    margin-top: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+.promoDiv > a.my-button {
+    margin: 5% 10% 0;
+    background-color: transparent;
+    color: #6433E0;
+    font-family: Trebuchet MS;
+    font-size: 15px;
+    font-weight: 800;
+    font-style: italic;
+    text-decoration: none;
+    padding: 5px 8px;
+    border: 0px solid #000;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.promoDiv > a.my-button:hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    border: 0.2px solid #6433E0;
+}
+.promoContainer > button {
+    cursor: pointer;
+    background: #188f50;
+    background-image: -webkit-linear-gradient(top, #188f50, #3cb042);
+    background-image: -moz-linear-gradient(top, #188f50, #3cb042);
+    background-image: -ms-linear-gradient(top, #188f50, #3cb042);
+    background-image: -o-linear-gradient(top, #188f50, #3cb042);
+    background-image: linear-gradient(to bottom, #188f50, #3cb042);
+    -webkit-border-radius: 18;
+    -moz-border-radius: 18;
+    border-radius: 18px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 17px;
+    padding: 8px 143px 10px 152px;
+    text-decoration: none;
+}
+.promoContainer > button:hover {
+    background: #41b56a;
+    text-decoration: none;
+}
+
+/* Item Detail */
+.detail {
+    margin: 2.5% 10% 3%;
+    padding: 3% 4%;
+    border: 1px solid black;
+    background-color: rgba(206, 207, 204, 0.8);
+    display: flex;
+    justify-content: space-between;
+}
+.detail > .image > img {
+    box-sizing: border-box;
+    height: 85px;
+    width: 85px;
+}
+
+.detail > .description {
+    margin-left: 1rem;
+}
+.detail > .description > p {
+    font-size: 16px;
+    color: #3e3c3c;
+}
+
+.detail > .description > h3 {
+    margin: 1rem 0 0 0;
+}
+.detail > .description > .values {
+    margin-top: 0.6rem;
+    margin-left: 0.3rem;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
